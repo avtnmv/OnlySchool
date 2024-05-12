@@ -47,7 +47,7 @@
                         <li><a href="">Про нас</a></li>
                         <li><a href="">Курси</a></li>
                         <li><a href="">Вiдгуки</a></li>
-                        <li><a href="" id="nav-link-button">Записатись</a></li>
+                        <li><a href="#" id="openModal" class="nav-link-button">Записатись</a></li>
         
                         <li><a href=""><svg class="svg-icon" width="49" height="49" viewBox="0 0 49 49" fill="#0D88EA" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="24.5" cy="24.5" r="24.5"/>
@@ -80,7 +80,7 @@
                     <p class="second-p">це <span>останній</span> пазл</p>
                     <p class="first-p">на шляху до</p>
                     <p class="second-p"><span>омріяних</span> балів!</p>
-                    <a href="" class="go-to-course-link">Записатись на курс</a>
+                    <a href="#" id="openModal2" class="go-to-course-link">Записатись на курс</a>
                 </div>
                 <div class="second-section">
                     <div class="bg-img">
@@ -1161,160 +1161,168 @@
             </div>
         </div>
     </a>
-
-
-    <div class="accordeon">
+    <div id="card-container">
+        <div class="accordeon">
+            <a href="#" onClick="look6('div6'); return false;">
+                <div class="accordeon-div-one">
+                    <p class="accordeon-p">(06)</p>
+                    <p class="accordeon-heading">Мені вистачить підготовки тільки на вашому курсі?</p>
+                </div>
+        
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L16 6L16 14.59L6.41 5L5 6.41L14.59 16L6 16L6 18L18 18L18 6Z" fill="#2F2F2F"/>
+                </svg>
+            </a>
+        </div>
+        
         <a href="#" onClick="look6('div6'); return false;">
-            <div class="accordeon-div-one">
-                <p class="accordeon-p">(06)</p>
-                <p class="accordeon-heading">Мені вистачить підготовки тільки на вашому курсі?</p>
-            </div>
+            <div id="div6" style="display:none ">
+                <div class="accordeon-two">
+                    <div class="svg-div-faq">
+                        <div class="accordeon-div-one">
+                            <p class="accordeon-p-opened">(06)</p>
+                            <p class="accordeon-heading-opened">Мені вистачить підготовки тільки на вашому курсі?</p>
+                        </div>
     
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L16 6L16 14.59L6.41 5L5 6.41L14.59 16L6 16L6 18L18 18L18 6Z" fill="#2F2F2F"/>
-            </svg>
-        </a>
-    </div>
-    
-    <a href="#" onClick="look6('div6'); return false;">
-        <div id="div6" style="display:none ">
-            <div class="accordeon-two">
-                <div class="svg-div-faq">
-                    <div class="accordeon-div-one">
-                        <p class="accordeon-p-opened">(06)</p>
-                        <p class="accordeon-heading-opened">Мені вистачить підготовки тільки на вашому курсі?</p>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_132_1054)">
+                                <path d="M6 6V8L14.59 8L5 17.59L6.41 19L16 9.41V18H18V6L6 6Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_132_1054">
+                                    <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
                     </div>
-
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_132_1054)">
-                            <path d="M6 6V8L14.59 8L5 17.59L6.41 19L16 9.41V18H18V6L6 6Z" fill="white"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_132_1054">
-                                <rect width="24" height="24" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
+                    <p class="accordeon-p-second">Так, бо на курсі є всі необхідні матеріали для якісного опрацювання тем та їх повторення</p>
                 </div>
-                <p class="accordeon-p-second">Так, бо на курсі є всі необхідні матеріали для якісного опрацювання тем та їх повторення</p>
             </div>
+        </a>
+    
+        <div class="accordeon">
+            <a href="#" onClick="look7('div7'); return false;">
+                <div class="accordeon-div-one">
+                    <p class="accordeon-p accordeon-p-seven">(07)</p>
+                    <p class="accordeon-heading">Чи зможу я готуватись одночасно<br>на різних предметах?</p>
+                </div>
+        
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L16 6L16 14.59L6.41 5L5 6.41L14.59 16L6 16L6 18L18 18L18 6Z" fill="#2F2F2F"/>
+                </svg>
+            </a>
         </div>
-    </a>
-
-    <div class="accordeon">
+        
         <a href="#" onClick="look7('div7'); return false;">
-            <div class="accordeon-div-one">
-                <p class="accordeon-p accordeon-p-seven">(07)</p>
-                <p class="accordeon-heading">Чи зможу я готуватись одночасно<br>на різних предметах?</p>
-            </div>
+            <div id="div7" style="display:none ">
+                <div class="accordeon-two">
+                    <div class="svg-div-faq">
+                        <div class="accordeon-div-one">
+                            <p class="accordeon-p-opened">(07)</p>
+                            <p class="accordeon-heading-opened accordeon-p-seven">Чи зможу я готуватись одночасно на різних предметах?</p>
+                        </div>
     
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L16 6L16 14.59L6.41 5L5 6.41L14.59 16L6 16L6 18L18 18L18 6Z" fill="#2F2F2F"/>
-            </svg>
-        </a>
-    </div>
-    
-    <a href="#" onClick="look7('div7'); return false;">
-        <div id="div7" style="display:none ">
-            <div class="accordeon-two">
-                <div class="svg-div-faq">
-                    <div class="accordeon-div-one">
-                        <p class="accordeon-p-opened">(07)</p>
-                        <p class="accordeon-heading-opened accordeon-p-seven">Чи зможу я готуватись одночасно на різних предметах?</p>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_132_1054)">
+                                <path d="M6 6V8L14.59 8L5 17.59L6.41 19L16 9.41V18H18V6L6 6Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_132_1054">
+                                    <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
                     </div>
-
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_132_1054)">
-                            <path d="M6 6V8L14.59 8L5 17.59L6.41 19L16 9.41V18H18V6L6 6Z" fill="white"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_132_1054">
-                                <rect width="24" height="24" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
+                    <p class="accordeon-p-second">Звичайно, адже програмою будь-якого нашого курсу передбачена відсутність збігів занять, тому є<br> можливість готуватись навіть на всіх предметах одночасно</p>
                 </div>
-                <p class="accordeon-p-second">Звичайно, адже програмою будь-якого нашого курсу передбачена відсутність збігів занять, тому є<br> можливість готуватись навіть на всіх предметах одночасно</p>
             </div>
+        </a>
+    
+        <div class="accordeon">
+            <a href="#" onClick="look8('div8'); return false;">
+                <div class="accordeon-div-one">
+                    <p class="accordeon-p accordeon-p-seven">(08)</p>
+                    <p class="accordeon-heading">Якщо я нічого не знаю, то зможу за 9 <br>місяців вивчити всю програму?</p>
+                </div>
+        
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L16 6L16 14.59L6.41 5L5 6.41L14.59 16L6 16L6 18L18 18L18 6Z" fill="#2F2F2F"/>
+                </svg>
+            </a>
         </div>
-    </a>
-
-    <div class="accordeon">
+        
         <a href="#" onClick="look8('div8'); return false;">
-            <div class="accordeon-div-one">
-                <p class="accordeon-p accordeon-p-seven">(08)</p>
-                <p class="accordeon-heading">Якщо я нічого не знаю, то зможу за 9 <br>місяців вивчити всю програму?</p>
-            </div>
+            <div id="div8" style="display:none ">
+                <div class="accordeon-two">
+                    <div class="svg-div-faq">
+                        <div class="accordeon-div-one">
+                            <p class="accordeon-p-opened accordeon-p-seven">(08)</p>
+                            <p class="accordeon-heading-opened">Якщо я нічого не знаю, то зможу за 9 <br>місяців вивчити всю програму?</p>
+                        </div>
     
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L16 6L16 14.59L6.41 5L5 6.41L14.59 16L6 16L6 18L18 18L18 6Z" fill="#2F2F2F"/>
-            </svg>
-        </a>
-    </div>
-    
-    <a href="#" onClick="look8('div8'); return false;">
-        <div id="div8" style="display:none ">
-            <div class="accordeon-two">
-                <div class="svg-div-faq">
-                    <div class="accordeon-div-one">
-                        <p class="accordeon-p-opened accordeon-p-seven">(08)</p>
-                        <p class="accordeon-heading-opened">Якщо я нічого не знаю, то зможу за 9 <br>місяців вивчити всю програму?</p>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_132_1054)">
+                                <path d="M6 6V8L14.59 8L5 17.59L6.41 19L16 9.41V18H18V6L6 6Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_132_1054">
+                                    <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
                     </div>
-
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_132_1054)">
-                            <path d="M6 6V8L14.59 8L5 17.59L6.41 19L16 9.41V18H18V6L6 6Z" fill="white"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_132_1054">
-                                <rect width="24" height="24" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
+                    <p class="accordeon-p-second">Докладаючи зусиль, можливо вивчити все, а ми будемо максимально з усім допомагати для<br> досягнення омріяних балів</p>
                 </div>
-                <p class="accordeon-p-second">Докладаючи зусиль, можливо вивчити все, а ми будемо максимально з усім допомагати для<br> досягнення омріяних балів</p>
             </div>
+        </a>
+    
+        <div class="accordeon">
+            <a href="#" onClick="look9('div9'); return false;">
+                <div class="accordeon-div-one">
+                    <p class="accordeon-p accordeon-p-seven">(09)</p>
+                    <p class="accordeon-heading">Що робити, якщо не зможу бути<br>присутнім на онлайн-занятті?</p>
+                </div>
+        
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L16 6L16 14.59L6.41 5L5 6.41L14.59 16L6 16L6 18L18 18L18 6Z" fill="#2F2F2F"/>
+                </svg>
+            </a>
         </div>
-    </a>
-
-    <div class="accordeon">
+        
         <a href="#" onClick="look9('div9'); return false;">
-            <div class="accordeon-div-one">
-                <p class="accordeon-p accordeon-p-seven">(09)</p>
-                <p class="accordeon-heading">Що робити, якщо не зможу бути<br>присутнім на онлайн-занятті?</p>
-            </div>
+            <div id="div9" style="display:none ">
+                <div class="accordeon-two">
+                    <div class="svg-div-faq">
+                        <div class="accordeon-div-one">
+                            <p class="accordeon-p-opened accordeon-p-seven">(09)</p>
+                            <p class="accordeon-heading-opened">Що робити, якщо не зможу бути<br>присутнім на онлайн-занятті?</p>
+                        </div>
     
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L16 6L16 14.59L6.41 5L5 6.41L14.59 16L6 16L6 18L18 18L18 6Z" fill="#2F2F2F"/>
-            </svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_132_1054)">
+                                <path d="M6 6V8L14.59 8L5 17.59L6.41 19L16 9.41V18H18V6L6 6Z" fill="white"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_132_1054">
+                                    <rect width="24" height="24" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <p class="accordeon-p-second">Це не біда, тому що запис кожного заняття<br> завантажується на платформу, також можна завжди<br> написати хелперу, якщо виникатимуть питання</p>
+                </div>
+            </div>
         </a>
     </div>
-    
-    <a href="#" onClick="look9('div9'); return false;">
-        <div id="div9" style="display:none ">
-            <div class="accordeon-two">
-                <div class="svg-div-faq">
-                    <div class="accordeon-div-one">
-                        <p class="accordeon-p-opened accordeon-p-seven">(09)</p>
-                        <p class="accordeon-heading-opened">Що робити, якщо не зможу бути<br>присутнім на онлайн-занятті?</p>
-                    </div>
+   
 
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_132_1054)">
-                            <path d="M6 6V8L14.59 8L5 17.59L6.41 19L16 9.41V18H18V6L6 6Z" fill="white"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_132_1054">
-                                <rect width="24" height="24" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </div>
-                <p class="accordeon-p-second">Це не біда, тому що запис кожного заняття<br> завантажується на платформу, також можна завжди<br> написати хелперу, якщо виникатимуть питання</p>
-            </div>
-        </div>
-    </a>
-
+    <div class="button">
+        <div id="load-more">Побачити всі запитання...</div>
+        <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.2325 0.601073L9.5 7.85274L16.7675 0.601074L19 2.83357L9.5 12.3336L-9.75857e-08 2.83357L2.2325 0.601073Z" fill="#2F2F2F"/>
+            </svg>
+            
+    </div>
 
     </section>
     </main>
@@ -1424,7 +1432,47 @@
             </div>
 
         </div>
+
+
+
+</div>
     </footer>
+    <div class="modal-background" id="modalBackground"></div>
+
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <div class="modal-container">
+            <span class="close">&times;</span>
+            <p>Скоріше отримуйте <span>персональну</span><br>консультацію про <span>актуальні</span> курси<br> підготовки </p>
+            <br>
+            <p class="modal-p">Наші менеджери завжди на звʼязку!  </p>
+            <div class="input-group">
+              <input type="text" id="input1" name="input1" placeholder="Імʼя">
+            </div>
+            <div class="input-group">
+              <input type="text" id="input2" name="input2" placeholder="Номер телефону">
+            </div>
+            <div class="input-group">
+              <input type="text" id="input3" name="input3" placeholder="Нікнейм в Instagram">
+            </div>
+            
+            <div class="input-group">
+                <select name="subjects" id="subjects-select">
+                  <option value="">Обрати предмет</option>
+                  <option value="ukr-mova">Українська мова і література</option>
+                  <option value="math">Математика</option>
+                  <option value="">Історія України</option>
+                  <option value="parrot">Англійська мова</option>
+                  <option value="spider">Бiологiя</option>
+                </select>
+            </div>
+            <button id="submit-btn" class="submit-button">Отправить</button>
+          </div>
+          </div>
+
+</div>
+
     <script src="./app.js"></script>
     <script src="./new.js"></script>
 </body>

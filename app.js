@@ -389,4 +389,57 @@ function look(){
             if(param.style.display == "none") param.style.display = "block";
             else param.style.display = "none"
             }
-  
+
+            
+  document.addEventListener("DOMContentLoaded", () => {
+  const button = document.getElementById("load-more");
+  const rect = document.getElementById("card-container");
+
+  button.addEventListener("click", () => {
+    toggleTwoClasses(rect, "is-visible", "is-hidden", 500);
+  });
+});
+
+function toggleTwoClasses(element, first, second, timeOfAnimation) {
+  if (!element.classList.contains(first)) {
+  element.classList.add(first);
+  element.classList.remove(second);
+  } else {
+  element.classList.add(second);
+  window.setTimeout(function() {
+  element.classList.remove(first);
+  },timeOfAnimation);
+  }
+}
+
+var modalBackground = document.getElementById("modalBackground");
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("openModal");
+var btn2 = document.getElementById("openModal2");
+var span = document.getElementsByClassName("close")[0];
+var submitBtn = document.getElementById("submit-btn");
+
+btn.onclick = function() {
+  modal.style.display = "block";
+  modalBackground.style.display = "block";
+}
+
+btn2.onclick = function() {
+  modal.style.display = "block";
+  modalBackground.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+  modalBackground.style.display = "none";
+}
+
+submitBtn.onclick = function() {
+  modal.style.display = "none";
+  modalBackground.style.display = "none";
+}
+
+modalBackground.onclick = function() {
+  modal.style.display = "none";
+  modalBackground.style.display = "none";
+}
