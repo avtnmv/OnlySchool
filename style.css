@@ -1751,7 +1751,7 @@ footer{
     height: 648px; 
 
   }
-  .modal-background {
+  .modal-background{
     display: none;
     position: fixed;
     z-index: 1;
@@ -1792,7 +1792,7 @@ footer{
   }
 
   .close:hover,
-  .close:focus {
+  .close:focus, .close1:hover, .close1:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
@@ -1871,8 +1871,165 @@ cursor: pointer;
     line-height: 25px;
     letter-spacing: 0%;
   }
-  
+  .nmt-header-p{
+    margin-top: 100px;
+    color: rgb(47, 47, 47);
+    font-family: 'Druk Text LCG';
+    font-size: 93px;
+    font-weight: 500;
+    line-height: 111px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .NMT-span{
+    color: rgb(252, 125, 1);
+    font-family: 'Druk Text LCG';
+    font-size: 156px;
+    font-weight: 500;
+    line-height: 136px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+  }
+.nmt-herosection{
+    margin-top: 40px;
+    background-image: url(./img/nmt-herosection.png);
+    background-size: contain;
+    height: 633px;
+        background-repeat: no-repeat;
+}
+.nmt-our-booster{
+    margin-top: 100px;
+    max-width: 1440px;
+    margin: auto;
+    padding-left: 60px;
+    padding-right: 60px;
 
+}
+.nmt-text-block{
+    background-image: url(./img/nmt-text-block.png);
+    background-size: contain;
+    height: 239px;
+    margin-top: 40px;
+    background-repeat: no-repeat;
+}
+.close1{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.nmt-slider-one {
+    position: relative;
+    height: 402px;
+    margin: auto;
+    user-select: none;
+    touch-action: pan-y;
+    color: black;
+    background-image: url(./img/nmt-cards-bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+  }
+  .roadmap{
+    margin-top: 100px;
+  }
+  
+  .nmt-slider-list-one {
+    width: 1440px;
+    height: 356px;
+    overflow: hidden;
+    margin: auto;
+  }
+  
+  .nmt-slider-list-one.grab {
+    cursor: grab;
+  }
+  
+  .slider-list.grabbing{
+    cursor: grabbing;
+  }
+  
+  .nmt-slider-track-one {
+    display: flex;
+  }
+  
+  .nmt-slide-one {
+    width: 303px;
+    height: 170px;
+    flex-shrink: 0;
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 24px;
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Добавлено */
+    color: rgb(255, 255, 255);
+    font-family: 'Manrope';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-top: 100px;
+
+  }
+  .nmt-slide-two{
+    width: 303px;
+    height: 206px;
+    flex-shrink: 0;
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 24px;
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Добавлено */
+    color: rgb(255, 255, 255);
+    font-family: 'Manrope';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-top: 100px;
+  }
+  .nmt-icon-bg{
+    padding-top: 15px;
+    height: 60px;
+    background-color: white;
+    text-align: right;
+    padding-right: 44px;
+    overflow: hidden; /* Добавлено */
+  }
+  .slider-arrows-nmt-one {
+    text-align: center;
+    margin-top: -10px;
+  }
+  
+  .next-nmt-one, .prev-nmt-one {
+    background: none;
+    border: none;
+    margin: 0 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .next-nmt-one.disabled, .prev-nmt-one.disabled {
+    opacity: .25;
+    pointer-events: none;
+  }
+  .nmt-slide-p{
+    padding: 18px 44px 18px 44px;
+  }
+
+
+ 
   @keyframes fadeInFromNone {
     0% {
       opacity: 0;
