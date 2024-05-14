@@ -1528,6 +1528,25 @@ text-align: left;
     margin-top: 30px;
 
 }
+.accordeonAcc a{
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 648px;
+  padding: 34px 30px 34px 30px;
+  border: 1px solid rgb(47, 47, 47);
+  border-radius: 24px;
+  color: rgb(47, 47, 47);
+  font-family: 'Manrope';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
 .accordeon a{
     text-decoration: none;
     color: black;
@@ -1570,6 +1589,8 @@ text-align: left;
     border: 1px solid rgb(47, 47, 47);
     border-radius: 24px;
     background-color: rgb(252, 125, 1);
+    margin: auto;
+    margin-top: 35px;
 }
 .svg-div-faq{
     display: flex;
@@ -2006,10 +2027,7 @@ cursor: pointer;
     padding-right: 44px;
     overflow: hidden; /* Добавлено */
   }
-  .slider-arrows-nmt-one {
-    text-align: center;
-    margin-top: -10px;
-  }
+
   
   .next-nmt-one, .prev-nmt-one {
     background: none;
@@ -2018,11 +2036,6 @@ cursor: pointer;
     font-size: 30px;
     cursor: pointer;
     color: white;
-  }
-  
-  .next-nmt-one.disabled, .prev-nmt-one.disabled {
-    opacity: .25;
-    pointer-events: none;
   }
   .nmt-slide-p{
     padding: 18px 44px 18px 44px;
@@ -2041,6 +2054,13 @@ cursor: pointer;
     line-height: 76px;
     letter-spacing: 0%;
     text-align: center;
+    text-transform: uppercase;
+  }
+  .nmt-header-p4{
+    font-family: 'Druk Text LCG';
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 76px;
     text-transform: uppercase;
   }
 .NMT-span1{
@@ -2072,11 +2092,14 @@ cursor: pointer;
 
 .nmt-slider-two {
     position: relative;
-    height: 402px;
     margin: auto;
     user-select: none;
     touch-action: pan-y;
     color: black;
+    max-width: 1440px;
+    margin: auto;
+    padding-left: 60px;
+    padding-right: 60px;
   }
   
   
@@ -2137,6 +2160,17 @@ line-height: 44px;
 letter-spacing: 0%;
 text-align: center;
 }
+.accordeon-heading1{
+    color: black;
+    width: 435px;
+    font-family: 'Manrope';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 10px;
+}
 .booster-img{
   width: 376px;
   margin-left: 24px;
@@ -2177,12 +2211,31 @@ text-align: center;
     border-radius: 25px;
     margin-left: 20px;
   }
+  .next-nmt-one-two-M, .prev-nmt-one-two-M {
+    background: none;
+    border: none;
+    font-size: 30px;
+    width: 50px;
+    cursor: pointer;
+    color: white;
+    height: 50px;
+    background-color: rgb(252, 125, 1);
+    border-radius: 25px;
+    margin-left: 20px;
+  }
   
   .next-nmt-one-two.disabled, .prev-nmt-one-two.disabled {
     opacity: .25;
     pointer-events: none;
     background-color: rgb(170, 170, 170);
   }
+
+  .next-nmt-one-two-M.disabled, .prev-nmt-one-two-M.disabled {
+    opacity: .25;
+    pointer-events: none;
+    background-color: rgb(170, 170, 170);
+  }
+  
   .nmt-slide-p{
     padding: 18px 44px 18px 44px;
   }
@@ -2215,9 +2268,9 @@ text-align: center;
   }
   .bg-money-card-one{
     border: 3px solid rgb(255, 255, 255);
-    border-radius: 24px;
-    width: 312px;
-    height: 329px;
+    border-radius: 28px;
+    width: 311px;
+    height: 328px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2259,8 +2312,6 @@ text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .bg-money-link a{
     color: rgb(255, 255, 255);
     font-family: 'Manrope';
     font-size: 18px;
@@ -2269,6 +2320,63 @@ text-align: center;
     letter-spacing: 4%;
     text-align: left;
   }
+
+  .bg-money-p3{
+    color: rgb(170, 170, 170);
+  font-family: 'Manrope';
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 4%;
+  text-align: center;
+  text-decoration: line-through;
+  margin-top: 5px;
+  }
+  .bg-money-p4{
+    color: rgb(255, 255, 255);
+  font-family: 'Manrope';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-top: 5px;
+  }
+  .bg-money-p5{
+    color: rgb(255, 255, 255);
+  font-family: 'Manrope';
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-top: 5px;
+  }
+  .bgmoneycard2{
+    background-image: url(./img/bgmoneycard2.png);
+    background-size: 100% 100%;
+  }
+.bg-money-link:hover{
+  border: 2px solid rgb(255, 176, 51);
+  color: rgb(255, 176, 51);
+  transition: .2s ease-in-out;
+}
+.bg-money-link:active{
+  border: 2px solid rgb(203, 91, 3);
+  color: rgb(203, 91, 3);
+  transition: .2s ease-in-out;
+}
+.they-can-u-can{
+  max-width: 1440px;
+  margin: auto;
+  margin-top: 100px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.nmt-header-bottom{
+margin-bottom: 50px;
+}
+
   @keyframes fadeInFromNone {
     0% {
       opacity: 0;

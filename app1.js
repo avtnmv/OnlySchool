@@ -433,3 +433,258 @@ function looknmt(){
               if(param.style.display == "none") param.style.display = "block";
               else param.style.display = "none"
               }
+
+              let nmtSlider2M = document.querySelector('.nmt-slider-two-M'),
+              nmtSliderList2M = nmtSlider2M.querySelector('.nmt-slider-list-two-M'),
+              nmtSliderTrack2M = nmtSlider2M.querySelector('.nmt-slider-track-two-M'),
+              nmtSlides2M = nmtSlider2M.querySelectorAll('.nmt-column-M'),
+              nmtArrows2M = nmtSlider2M.querySelector('.slider-M'),
+              nmtPrev2M = nmtArrows2M.children[0],
+              nmtNext2M = nmtArrows2M.children[1],
+              nmtSlideWidth2M = nmtSlides2M[0].offsetWidth,
+              nmtSlideIndex2M = 0,
+              nmtPosInit2M = 0,
+              nmtPosX12M = 0,
+              nmtPosX22M = 0,
+              nmtPosY12M = 0,
+              nmtPosY22M = 0,
+              nmtPosFinal2M = 0,
+              nmtIsSwipe2M = false,
+              nmtIsScroll2M = false,
+              nmtAllowSwipe2M = true,
+              nmtTransition2M = true,
+              nmtNextTrf2M = 0,
+              nmtPrevTrf2M = 0,
+              nmtLastTrf2M = --nmtSlides2M.length * nmtSlideWidth2M,
+              nmtPosThreshold2M = nmtSlides2M[0].offsetWidth * 0.35,
+              nmtTrfRegExp2M = /([-0-9.]+(?=px))/,
+              nmtSwipeStartTime2M,
+              nmtSwipeEndTime2M,
+              nmtGetEvent2M = function() {
+                return (event.type.search('touch') !== -1) ? event.touches[0] : event;
+              },
+              nmtSlide2M = function() {
+                if (nmtTransition2M) {
+                  nmtSliderTrack2M.style.transition = 'transform .5s';
+                }
+                nmtSliderTrack2M.style.transform = `translate3d(-${nmtSlideIndex2M * nmtSlideWidth2M}px, 0px, 0px)`;
+            
+                nmtPrev2M.classList.toggle('disabled', nmtSlideIndex2M === 0);
+                nmtNext2M.classList.toggle('disabled', nmtSlideIndex2M === 2);
+              },
+              nmtSwipeStart2M = function() {
+                let evt = nmtGetEvent2M();
+            
+                if (nmtAllowSwipe2M) {
+            
+                  nmtSwipeStartTime2M = Date.now();
+                  
+                  nmtTransition2M = true;
+            
+                  nmtNextTrf2M = (nmtSlideIndex2M + 1) * -nmtSlideWidth2M;
+                  nmtPrevTrf2M = (nmtSlideIndex2M - 1) * -nmtSlideWidth2M;
+            
+                  nmtPosInit2M = nmtPosX12M = evt.clientX;
+                  nmtPosY12M = evt.clientY;
+            
+                  nmtSliderTrack2M.style.transition = '';
+            
+                  document.addEventListener('touchmove', nmtSwipeAction2M);
+                  document.addEventListener('mousemove', nmtSwipeAction2M);
+                  document.addEventListener('touchend', nmtSwipeEnd2M);
+                  document.addEventListener('mouseup', nmtSwipeEnd2M);
+            
+                  nmtSliderList2M.classList.remove('grab');
+                  nmtSliderList2M.classList.add('grabbing');
+                }
+              },
+              nmtSwipeAction2M = function() {
+            
+                let evt = nmtGetEvent2M(),
+                  style = nmtSliderTrack2M.style.transform,
+                  transform = +style.match(nmtTrfRegExp2M)[0];
+            
+                nmtPosX22M = nmtPosX12M - evt.clientX;
+                nmtPosX12M = evt.clientX;
+            
+                nmtPosY22M = nmtPosY12M - evt.clientY;
+                nmtPosY12M = evt.clientY;
+            
+                if (!nmtIsSwipe2M && !nmtIsScroll2M) {
+                  let posY = Math.abs(nmtPosY22M);
+                  if (posY > 7 || nmtPosX22M === 0) {
+                    nmtIsScroll2M = true;
+                    nmtAllowSwipe2M = false;
+                  } else if (posY < 7) {
+                    nmtIsSwipe2M = true;
+                  }
+                }
+            
+                if (nmtIsSwipe2M) {
+                  if (nmtSlideIndex2M === 0) {
+                    if (nmtPosInit2M < nmtPosX12M) {
+                      nmtSetTransform2M(transform, 0);
+                      return;
+                    } else {
+                      nmtAllowSwipe2M = true;
+                    }
+                  }
+            
+                  // запрет ухода вправо на последнем слайде
+                  if (nmtSlideIndex2M === --nmtSlides2M.length) {
+                    if (nmtPosInit2M > nmtPosX12M) {
+                      nmtSetTransform2M(transform, nmtLastTrf2M);
+                      return;
+                    } else {
+                      nmtAllowSwipe2M = true;
+                    }
+                  }
+            
+                  if (nmtPosInit2M > nmtPosX12M && transform < nmtNextTrf2M || nmtPosInit2M < nmtPosX12M && transform > nmtPrevTrf2M) {
+                    nmtReachEdge2M();
+                    return;
+                  }
+            
+                  nmtSliderTrack2M.style.transform = `translate3d(${transform - nmtPosX22M}px, 0px, 0px)`;
+                }
+            
+              },
+              nmtSwipeEnd2M = function() {
+                nmtPosFinal2M = nmtPosInit2M - nmtPosX12M;
+            
+                nmtIsScroll2M = false;
+                nmtIsSwipe2M = false;
+            
+                document.removeEventListener('touchmove', nmtSwipeAction2M);
+                document.removeEventListener('mousemove', nmtSwipeAction2M);
+                document.removeEventListener('touchend', nmtSwipeEnd2M);
+                document.removeEventListener('mouseup', nmtSwipeEnd2M);
+            
+                nmtSliderList2M.classList.add('grab');
+                nmtSliderList2M.classList.remove('grabbing');
+            
+                if (nmtAllowSwipe2M) {
+                  nmtSwipeEndTime2M = Date.now();
+                  if (Math.abs(nmtPosFinal2M) > nmtPosThreshold2M || nmtSwipeEndTime2M - nmtSwipeStartTime2M < 300) {
+                    if (nmtPosInit2M < nmtPosX12M) {
+                      nmtSlideIndex2M--;
+                    } else if (nmtPosInit2M > nmtPosX12M) {
+                      nmtSlideIndex2M++;
+                    }
+                  }
+            
+                  if (nmtPosInit2M !== nmtPosX12M) {
+                    nmtAllowSwipe2M = false;
+                    nmtSlide2M();
+                  } else {
+                    nmtAllowSwipe2M = true;
+                  }
+            
+                } else {
+                  nmtAllowSwipe2M = true;
+                }
+            
+              },
+              nmtSetTransform2M = function(transform, comapreTransform) {
+                if (transform >= comapreTransform) {
+                  if (transform > comapreTransform) {
+                    nmtSliderTrack2M.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
+                  }
+                }
+                nmtAllowSwipe2M = false;
+              },
+              nmtReachEdge2M = function() {
+                nmtTransition2M = false;
+                nmtSwipeEnd2M();
+                nmtAllowSwipe2M = true;
+              };
+            
+            nmtSliderTrack2M.style.transform = 'translate3d(0px, 0px, 0px)';
+            nmtSliderList2M.classList.add('grab');
+            
+            nmtSliderTrack2M.addEventListener('transitionend', () => nmtAllowSwipe2M = true);
+            nmtSlider2.addEventListener('touchstart', nmtSwipeStart2M);
+            nmtSlider2.addEventListener('mousedown', nmtSwipeStart2M);
+            
+            nmtArrows2M.addEventListener('click', function() {
+              let target = event.target;
+            
+              if (target.classList.contains('next-nmt-one-two-M')) {
+                nmtSlideIndex2M++;
+              } else if (target.classList.contains('prev-nmt-one-two-M')) {
+                nmtSlideIndex2M--;
+              } else {
+                return;
+              }
+            
+              nmtSlide2M();
+            });
+            
+            function looknmtM(){
+              param=document.getElementById('nmt-slide-one-1-M');
+              if(param.style.display == "none") param.style.display = "block";
+              else param.style.display = "none"
+              }
+              
+            function looknmt2M(){
+              param=document.getElementById('nmt-slide-one-2-M');
+              if(param.style.display == "none") param.style.display = "block";
+              else param.style.display = "none"
+            }
+            
+            function looknmt3M(){
+              param=document.getElementById('nmt-slide-one-3-M');
+              if(param.style.display == "none") param.style.display = "block";
+              else param.style.display = "none"
+            }
+            
+            function looknmt4M(){
+              param=document.getElementById('nmt-slide-one-4-M');
+              if(param.style.display == "none") param.style.display = "block";
+              else param.style.display = "none"
+            }
+            
+            function looknmt5MN(){
+              param=document.getElementById('nmt-slide-one-5-M');
+              if(param.style.display == "none") param.style.display = "block";
+              else param.style.display = "none"
+            }
+            
+            function looknmt6M(){
+              param=document.getElementById('nmt-slide-one-6-M');
+              if(param.style.display == "none") param.style.display = "block";
+              else param.style.display = "none"
+            }
+            
+
+            function lookacc(){
+              param=document.getElementById('divacc1');
+              if(param.style.display == "none") param.style.display = "block";
+              else param.style.display = "none"
+              }
+
+              function lookacc2(){
+                param=document.getElementById('divacc2');
+                if(param.style.display == "none") param.style.display = "block";
+                else param.style.display = "none"
+                }
+
+                function lookacc3(){
+                  param=document.getElementById('divacc3');
+                  if(param.style.display == "none") param.style.display = "block";
+                  else param.style.display = "none"
+                  }
+
+                  function lookacc4(){
+                    param=document.getElementById('divacc4');
+                    if(param.style.display == "none") param.style.display = "block";
+                    else param.style.display = "none"
+                    }
+
+                    function lookacc5(){
+                      param=document.getElementById('divacc5');
+                      if(param.style.display == "none") param.style.display = "block";
+                      else param.style.display = "none"
+                      }
+              
+          

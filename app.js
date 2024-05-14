@@ -337,58 +337,6 @@ arrows.addEventListener('click', function() {
 
 prev.classList.add('disabled'); // Добавляем класс disabled для кнопки влево изначально
 
-function look(){
-  param=document.getElementById('div1');
-  if(param.style.display == "none") param.style.display = "block";
-  else param.style.display = "none"
-  }
-  
-  
-  function look2(){
-  param=document.getElementById('div2');
-  if(param.style.display == "none") param.style.display = "block";
-  else param.style.display = "none"
-  }
-  
-  function look3(){
-      param=document.getElementById('div3');
-      if(param.style.display == "none") param.style.display = "block";
-      else param.style.display = "none"
-      }
-  
-  function look4(){
-  param=document.getElementById('div4');
-  if(param.style.display == "none") param.style.display = "block";
-  else param.style.display = "none"
-  }
-  function look5(){
-    param=document.getElementById('div5');
-    if(param.style.display == "none") param.style.display = "block";
-    else param.style.display = "none"
-    }
-  
-    function look6(){
-      param=document.getElementById('div6');
-      if(param.style.display == "none") param.style.display = "block";
-      else param.style.display = "none"
-      }
-  
-      function look7(){
-        param=document.getElementById('div7');
-        if(param.style.display == "none") param.style.display = "block";
-        else param.style.display = "none"
-        }
-        function look8(){
-          param=document.getElementById('div8');
-          if(param.style.display == "none") param.style.display = "block";
-          else param.style.display = "none"
-          }
-  
-          function look9(){
-            param=document.getElementById('div9');
-            if(param.style.display == "none") param.style.display = "block";
-            else param.style.display = "none"
-            }
 
             
   document.addEventListener("DOMContentLoaded", () => {
@@ -443,3 +391,65 @@ modalBackground.onclick = function() {
   modal.style.display = "none";
   modalBackground.style.display = "none";
 }
+
+function look(){
+  param=document.getElementById('div1');
+  if(param.style.display == "none") param.style.display = "block";
+  else param.style.display = "none"
+  }
+  function look(){
+    param=document.getElementById('div1');
+    if(param.style.display == "none") param.style.display = "block";
+    else param.style.display = "none"
+    }
+
+    function look2(){
+      param=document.getElementById('div2');
+      if(param.style.display == "none") param.style.display = "block";
+      else param.style.display = "none"
+      }
+
+      function look3(){
+        param=document.getElementById('div3');
+        if(param.style.display == "none") param.style.display = "block";
+        else param.style.display = "none"
+        }
+
+        function look4(){
+          param=document.getElementById('div4');
+          if(param.style.display == "none") param.style.display = "block";
+          else param.style.display = "none"
+          }
+
+          function look5(){
+            param=document.getElementById('div5');
+            if(param.style.display == "none") param.style.display = "block";
+            else param.style.display = "none"
+            }
+
+            function look6(){
+              param=document.getElementById('div6');
+              if(param.style.display == "none") param.style.display = "block";
+              else param.style.display = "none"
+              }
+
+              function look7(){
+                param=document.getElementById('div7');
+                if(param.style.display == "none") param.style.display = "block";
+                else param.style.display = "none"
+                }
+
+                function look8(){
+                  param=document.getElementById('div8');
+                  if(param.style.display == "none") param.style.display = "block";
+                  else param.style.display = "none"
+                  }
+
+                  function look9(){
+                    param=document.getElementById('div9');
+                    if(param.style.display == "none") param.style.display = "block";
+                    else param.style.display = "none"
+                    }
+
+
+  
