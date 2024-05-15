@@ -1,3 +1,4 @@
+let windowWidthR = window.innerWidth;
 let sliderR = document.querySelector('.slider-reviews'),
   sliderListR = sliderR.querySelector('.slider-list-reviews'),
   sliderTrackR = sliderR.querySelector('.slider-track-reviews'),
@@ -33,8 +34,15 @@ let sliderR = document.querySelector('.slider-reviews'),
     }
     sliderTrackR.style.transform = `translate3d(-${slideIndexR * slideWidthR}px, 0px, 0px)`;
 
-    prevR.classList.toggle('disabled', slideIndexR === 0);
-    nextR.classList.toggle('disabled', slideIndexR === 6);
+    if(windowWidthR >= 1320){
+      prevR.classList.toggle('disabled', slideIndexR === 0);
+      nextR.classList.toggle('disabled', slideIndexR === 7);
+    }
+    else if(windowWidthR < 1100 && windowWidthR > 630){
+      prevR.classList.toggle('disabled', slideIndexR === 0);
+      nextR.classList.toggle('disabled', slideIndexR === 9);
+    }
+
   },
   swipeStartR = function() {
     let evt = getEventR();
@@ -187,4 +195,11 @@ document.addEventListener('click', function(event) { // изменено
 // Добавляем класс disabled, если slideIndex равен 0
 if (slideIndexR === 0) {
   prevR.classList.add('disabled');
+}
+
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
 }

@@ -175,9 +175,9 @@ function getCoords(elem) {
       prev.classList.toggle('disabled', slideIndex === 0);
       next.classList.toggle('disabled', slideIndex === 1);
     }
-    else{
+    else if(windowWidth < 1100 && windowWidth > 630){
       prev.classList.toggle('disabled', slideIndex === 0);
-      next.classList.toggle('disabled', slideIndex === 5);
+      next.classList.toggle('disabled', slideIndex === 4);
     }
 
   },
