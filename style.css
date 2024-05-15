@@ -2971,12 +2971,84 @@ width: 608px;
       .formats-of-study-background{
         height: 2000px;
       }
+      .formats-column{
+        align-items: center;
+      }
       .formats-span{
         font-size: 85px;
         line-height: 110px;
       }
+      .card-two{
+        margin-bottom: 15px;
+      }
       .how-study-works{
         width: 327px;
         background-image: url(./img/how-study-mobile.png);
+        height: 4000px;
+      }
+      .teachers{
+        width: 327px;
+        margin-left: 20px;
+      }
+      .teachers1{
+        width: 327px;
+        margin: auto;
+      }
+      .slider{
+        width: 327px;
+      }
+      .slide{
+        margin-right: 5px;
+      }
+      .section-try-study-with-us{
+        width: 327px;
+      }
+      .try-container{
+        flex-direction: column;
+        width: 327px;
+        align-items: center;
+        margin-top: 200px;
+      }
+      .try-div-two{
+        margin-top: 60px;
+      }
+      .reviews{
+        margin-top: 200px;
+        width: 327px;
+      }
+      .reviews-p-three{
+        margin-top: 45px;
+        line-height: 29px;
+        font-size: 12px;
+        margin-left: 2px;
+      }
+      .slider-arrows-reviews{
+        margin-top: 45px;
+      }
+      .FAQ{
+        width: 327px;
+      }
+      .faq-p-one{
+        font-size: 33px;
+      }
+      .faq-p-two{
+        font-size: 63px;
+        line-height: 0px;
+      }
+      .accordeon a{
+        width: 327px;
+      }
+      .accordeon-heading1{
+        width: unset;
+      }
+      .accordeon-two{
+        width: 327px;
+      }
+      .svg-div-faq{
+        width: 289px;
+      }
+      .accordeon-div-one{
+        width: 289px;
+        justify-content: center;
       }
     }

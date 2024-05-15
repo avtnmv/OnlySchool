@@ -179,6 +179,10 @@ function getCoords(elem) {
       prev.classList.toggle('disabled', slideIndex === 0);
       next.classList.toggle('disabled', slideIndex === 4);
     }
+    else{
+      prev.classList.toggle('disabled', slideIndex === 0);
+      next.classList.toggle('disabled', slideIndex === 4);
+    }
 
   },
   swipeStart = function() {

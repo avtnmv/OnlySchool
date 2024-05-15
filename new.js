@@ -42,6 +42,10 @@ let sliderR = document.querySelector('.slider-reviews'),
       prevR.classList.toggle('disabled', slideIndexR === 0);
       nextR.classList.toggle('disabled', slideIndexR === 9);
     }
+    else{
+      prevR.classList.toggle('disabled', slideIndexR === 0);
+      nextR.classList.toggle('disabled', slideIndexR === 9);
+    }
 
   },
   swipeStartR = function() {
