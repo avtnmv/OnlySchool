@@ -2917,4 +2917,66 @@ width: 608px;
         width: 327px;
         margin-left: 0px;
       }
+      .whats-more-bg-info{
+        width: 327px;
+      }
+      .whats-more-container{
+        width: 327px;
+      }
+      .whats-more{
+        width: 327px;
+        flex-direction: column;
+        margin-top: 60px;
+      }
+      .whats-more .border{
+        height: 1px;
+        width: 327px;
+        margin-top: 25px;
+      }
+      .whats-more-div-one, .whats-more-div-two, .whats-more-div-three{
+        width: 327px;
+        height: 66px;
+        font-size: 26px;
+        margin-top: 25px;
+      }
+
+      .whats-more-div-one p, .whats-more-div-two p, .whats-more-div-three p{
+        font-size: 16px;
+      }
+      .static-icons, .static-icons-two{
+        width: 327px;
+        flex-direction: column;
+        align-items: center;
+      }
+      .static-icons-two{
+        margin-top: 0px;
+      }
+      .static-icon-one, .static-icon-two, .static-icon-three, .static-icon-four, .static-icon-five, .static-icon-six{
+        font-size: 5px;
+        margin-bottom: 15px;
+
+      }
+      .formats-of-study-container{
+        width: 327px;
+        margin: auto;
+      }
+      .formats-p-two{
+        margin-left: 151px;
+      }
+      .format-cards{
+        width: 327px; 
+        margin: auto;
+        flex-direction: column;
+      }
+      .formats-of-study-background{
+        height: 2000px;
+      }
+      .formats-span{
+        font-size: 85px;
+        line-height: 110px;
+      }
+      .how-study-works{
+        width: 327px;
+        background-image: url(./img/how-study-mobile.png);
+      }
     }
