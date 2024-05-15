@@ -2819,3 +2819,102 @@ width: 608px;
   padding-top: 60px;
 }
     }
+
+
+/* mobile */
+    @media (max-width: 631px) {
+
+      .wrapper{
+        overflow-x: hidden;
+      }
+      header{
+        margin: auto;
+      }
+      .header-container{
+        width: 327px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .herosection{
+        width: 327px;
+        height: 446px;
+        background-image: url(./img/section-header-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 20px;
+      }
+      .go-to-course-link{
+        padding: 0;
+
+      }
+      .first-section p{
+        display: none;
+      } 
+      .second-section{
+        display: none;
+      }
+      .first-section a{
+        margin-top: 430px;
+        display: block;
+        width: 327px;
+        margin-left: 2px;
+      }
+
+      .navbar{
+        display: none;
+      }
+      #hamburger-nav {
+        display: flex;
+      }
+      .bg-img{
+        display: none;
+      }
+      .second-section{
+        width: 327px;
+        background-size: cover;
+      }
+      .why-we{
+        margin-top: 75px;
+        width: 327px;
+      }
+      .why-we-container{
+        flex-direction: column;
+      }
+      .heading{
+        width: 327px;
+      }
+      .why-we-icons{
+        width: 327px;
+      }
+      .item{
+        width: 155px;
+        height: 147px;
+        margin-right: 0;
+      }
+      .why-we-section-one{
+        margin-bottom: 20px;
+      }
+      .roller{
+        margin-left: 0px;
+      }
+      .filter{
+        margin-left: 0px;
+        width: 327px;
+      }
+      .filter .text{
+        margin-bottom: 25px;
+        font-size: 14px;
+      }
+      .filter .block-min{
+        width: 45px;
+        height: 45px;
+        top: -12px;
+      }
+      .roller-span{
+        font-size: 16px;
+      }
+      .emoji{
+        width: 327px;
+        margin-left: 0px;
+      }
+    }
