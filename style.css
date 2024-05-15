@@ -3055,10 +3055,12 @@ width: 608px;
       .accordeon-p-first{
         width: 235px;
         font-size: 14px;
+        margin-left: 34px;
       }
       .accordeon-p-second{
         width: 235px;
         font-size: 14px;
+        margin-left: 34px;
       }
       .accordeon-p-opened{
         margin-top: 0px;
@@ -3080,5 +3082,8 @@ width: 608px;
       }
         footer{
           background-image: url(./img/footer-bg-mobile.png);
+        }
+        .accordeon-p-seven{
+          margin-top: -15px;
         }
     }
