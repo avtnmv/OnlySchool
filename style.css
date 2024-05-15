@@ -3043,12 +3043,42 @@ width: 608px;
       }
       .accordeon-two{
         width: 327px;
+        padding: 16px 19px 16px 19px;
       }
       .svg-div-faq{
         width: 289px;
       }
       .accordeon-div-one{
         width: 289px;
-        justify-content: center;
+        align-items: unset;
       }
+      .accordeon-p-first{
+        width: 235px;
+        font-size: 14px;
+      }
+      .accordeon-p-second{
+        width: 235px;
+        font-size: 14px;
+      }
+      .accordeon-p-opened{
+        margin-top: 0px;
+      }
+      .footer-section-one-p-second{
+        width: 195px;
+        font-size: 12px;
+        line-height: 20px;
+      }
+      .footer-container{
+        width: 327px;
+      }
+      .footer-section-one-p-first{
+        font-size: 33px;
+        line-height: 80px;
+      }
+      .footer-links{
+        width: 150px;
+      }
+        footer{
+          background-image: url(./img/footer-bg-mobile.png);
+        }
     }
