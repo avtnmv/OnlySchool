@@ -2476,9 +2476,9 @@ margin-bottom: 50px;
     }
   }
   
-  @media (max-width: 1251px) {
+  @media (max-width: 1351px) {
 
-    body{
+    .wrapper{
       overflow-x: hidden;
     }
     header{
@@ -2591,6 +2591,9 @@ margin-left: 20px;
 }
 .filter .text{
   font-size: 16.5px;
+}
+.try-div-two a{
+  width: 300px;
 }
 .whats-more-bg-info{
   flex-direction: column;
