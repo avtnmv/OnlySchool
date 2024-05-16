@@ -2068,7 +2068,7 @@ cursor: pointer;
   }
 
   
-  .next-nmt-one, .prev-nmt-one {
+  .next-nmt-one-nmt, .prev-nmt-one-nmt {
     background: none;
     border: none;
     margin: 0 10px;
@@ -2343,6 +2343,9 @@ text-align: center;
     letter-spacing: 0%;
     text-align: left;
   }
+  .slider-arrows-nmt-one-nmt{
+    text-align: center;
+  }
   .bg-money-link{
     border: 2px solid rgb(255, 255, 255);
     border-radius: 12px;
@@ -2523,6 +2526,9 @@ margin-bottom: 50px;
     header{
       margin: auto;
     }
+    .wrapForm{
+      width: 550px;
+    }
     .header-container{
       width: 618px;
       padding-left: 0;
@@ -2534,7 +2540,9 @@ margin-bottom: 50px;
       background-size: cover;
       height: 310px;
     }
-
+    .modal{
+      width: 550px;
+    }
 .sale-a-div{
   padding-top: 225px;
 }
@@ -2867,6 +2875,95 @@ width: 608px;
 .footer-section-one{
   padding-top: 60px;
 }
+.nmt-herosection{
+  width: 618px;
+  background-image: url(./img/nmt-hero-tablet.png);
+background-size: contain;
+height: 766px;
+}
+
+.nmt-our-booster{
+  width: 618px;
+  padding-right: 0;
+  padding-left: 0;
+}
+.nmt-text-block{
+  background-image: url(./img/nmt-your-tablet.png);
+  width: 618px;
+  background-size: contain;
+  height: 346px;
+}
+.nmt-slider-list-one.grab, .nmt-slider-list-one.grabbing{
+  width: 618px;
+}
+.nmt-slide-one{
+  width: 275px;
+}
+.nmt-header-p{
+  margin-top: 60px;
+  font-size: 33px;
+  line-height: 60px;
+}
+.NMT-span{
+  font-size: 64px;
+  line-height: 0px;
+}
+.unique{
+  padding-right: 0;
+  padding-left: 0;
+  width: 618px;
+}
+.unique-bg{
+ display: none;
+}
+.unique-bg-text{
+  width: 618px;
+  height: 370px;
+  background-image: url(./img/text-block-tablet.png);
+  background-size: cover;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.faq-p-one{
+  font-size: 33px;
+}
+.faq-p-two{
+  font-size: 64px;
+  line-height: 0px;
+}
+.what-about-money{
+  padding-left: 0;
+  padding-right: 0;
+  width: 618px;
+}
+.nmt-slider-two{
+  width: 618px;
+  padding-right: 0;
+  padding-left: 0;
+}
+.they-can-u-can{
+  padding-right: 0;
+  padding-left: 0;
+  width: 618px;
+}
+.bg-money-container{
+width: 618px;
+}
+.bg-money{
+  height: 800px;
+}
+.bg-money-card-one{
+  width: 300px;
+  margin-top: 15px;
+}
+.footer-tablet{
+display: flex;
+flex-direction: column;
+
+}
+.footer-tablet a{
+  text-align: right;
+}
     }
 
 
@@ -2895,7 +2992,9 @@ width: 608px;
       .sale-a-div{
         padding-top: 250px;
       }
-
+      .modal{
+        width: 320px;
+      }
       .herosection{
         width: 327px;
         height: 446px;

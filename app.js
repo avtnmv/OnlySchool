@@ -368,8 +368,9 @@ var modalBackground = document.getElementById("modalBackground");
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("openModal");
 var btn2 = document.getElementById("openModal2");
-var span = document.getElementsByClassName("close")[0];
-var submitBtn = document.getElementById("submit-btn");
+var btn3 = document.getElementById("openModal3");
+var btn4 = document.getElementById("openModal4");
+var btn4 = document.getElementById("openModal5");
 
 btn.onclick = function() {
   modal.style.display = "block";
@@ -380,20 +381,17 @@ btn2.onclick = function() {
   modal.style.display = "block";
   modalBackground.style.display = "block";
 }
-
-span.onclick = function() {
-  modal.style.display = "none";
-  modalBackground.style.display = "none";
+btn3.onclick = function() {
+  modal.style.display = "block";
+  modalBackground.style.display = "block";
 }
-
-submitBtn.onclick = function() {
-  modal.style.display = "none";
-  modalBackground.style.display = "none";
+btn4.onclick = function() {
+  modal.style.display = "block";
+  modalBackground.style.display = "block";
 }
-
-modalBackground.onclick = function() {
-  modal.style.display = "none";
-  modalBackground.style.display = "none";
+btn5.onclick = function() {
+  modal.style.display = "block";
+  modalBackground.style.display = "block";
 }
 
 function look(){

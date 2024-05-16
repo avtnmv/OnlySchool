@@ -115,6 +115,7 @@ let sliderR = document.querySelector('.slider-reviews'),
           allowSwipeR = true;
         }
       }
+      
 
       if (posInitR > posX1R && transform < nextTrfR || posInitR < posX1R && transform > prevTrfR) {
         reachEdgeR();

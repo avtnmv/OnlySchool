@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    
     <header>
         <div class="header-container">
             <div class="nav-container">
@@ -40,6 +41,8 @@
                         </clipPath>
                         </defs>
                         </svg>
+
+                        
                 </div>
         
                 <div class="navbar">
@@ -72,6 +75,24 @@
                             </a></li>
                     </ul>
                 </div>
+
+                <nav id="hamburger-nav">
+                    <div class="hamburger-menu">
+                      <div class="hamburger-icon" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="menu-links">
+                        <ul>
+                          <li><a href="#herosection" onclick="toggleMenu()">Про нас</a></li>
+                          <li><a href="#courses" onclick="toggleMenu()">Курси</a></li>
+                          <li><a href="#reviews" onclick="toggleMenu()">Вiдгуки</a></li>
+                          <li><a href="#" class="" id="openModal2">Записатись</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
             </div>
             <p class="nmt-header-p">МИ ЗНАЄМО,<br> <span class="NMT-span">ЩО ВИ ЗАРАЗ…</span></p>
             <div class="nmt-herosection"></div>
@@ -87,6 +108,7 @@
   <p class="nmt-header-p nmt-our-booster">ЩО ОЧІКУЄ<br>
     <span class="NMT-span">ВАС НА КУРСІ</span></p>
     <div class="nmt-slider-one">
+
       <div class="nmt-slider-list-one">
         <div class="nmt-slider-track-one">
 
@@ -203,10 +225,10 @@
           
           </div>
         </div>
-        <div class="slider-arrows-nmt-one">
-          <button type="button" class="prev-nmt-one">&#10094;</button>
-          <button type="button" class="next-nmt-one">&#10095;</button>
-        </div>
+        <div class="slider-arrows-nmt-one-nmt">
+            <button type="button" class="prev-nmt-one-nmt">&#10094;</button>
+            <button type="button" class="next-nmt-one-nmt">&#10095;</button>
+          </div>
       </div>
       </div>
 </section>
@@ -214,7 +236,7 @@
 
 <section class="unique">
   <p class="nmt-header-p1">І ЩЕ ДЕЩО <span class="NMT-span1">Унікальне</span></p>
-  <div><img class="unique-bg" src="./img/unique-bg.png" alt=""></div>
+  <div class="unique-bg-text"><img class="unique-bg" src="./img/unique-bg.png" alt=""></div>
   </section>
 
   <section class="nmt-slider-two">
@@ -370,26 +392,29 @@
 
     <div class="bg-money">
         <div class="bg-money-container">
-            <div class="bg-money-card-one">
-                <div>
-                    <p class="bg-money-p1">1 предмет<br><span class="bg-money-span">755грн</span></p>
-                    <p class="bg-money-p2">+ система додаткових знижок при бронюванні декількох предметів</p>
+            <div class="nmt-column-money">
+                <div class="bg-money-card-one">
+                    <div>
+                        <p class="bg-money-p1">1 предмет<br><span class="bg-money-span">755грн</span></p>
+                        <p class="bg-money-p2">+ система додаткових знижок при бронюванні декількох предметів</p>
+                    </div>
+    
+                    <a href="" class="bg-money-link">Записатись</a>
                 </div>
-
-                <a href="" class="bg-money-link">Записатись</a>
-            </div>
-            
-            <div class="bg-money-card-one bgmoneycard2">
-                <div>
-                    <p class="bg-money-p1">2 предмети</p>
-                    <p class="bg-money-p3">1506грн</p>
-                    <p class="bg-money-p4">знижка 10%</p>
-                    <p class="bg-money-p5">1435грн</p>
+                
+                <div class="bg-money-card-one bgmoneycard2">
+                    <div>
+                        <p class="bg-money-p1">2 предмети</p>
+                        <p class="bg-money-p3">1506грн</p>
+                        <p class="bg-money-p4">знижка 10%</p>
+                        <p class="bg-money-p5">1435грн</p>
+                    </div>
+    
+                    <a href="" class="bg-money-link">Записатись</a>
                 </div>
-
-                <a href="" class="bg-money-link">Записатись</a>
             </div>
 
+        <div class="nmt-column-money">
             <div class="bg-money-card-one">
                 <div>
                     <p class="bg-money-p1">3 предмети</p>
@@ -413,6 +438,7 @@
                     <a href="" class="bg-money-link">Записатись</a>
                 
             </div>
+        </div>
         </div>
     </div>
   </section>
@@ -756,7 +782,7 @@
                     <p class="footer-section-one-p-second">Єдиний правильний вибір на шляху до 200 балів</p>
                 </div>
 
-                <div>
+                <div class="footer-tablet">
                     <a href="">Про нас</a>
                     <a href="">Курси</a>
                     <a href="">Відгуки</a>
@@ -901,5 +927,6 @@
 
 
   <script src="app1.js"></script>
+  <script src="./new.js"></script>
 </body>
 </html>

@@ -31,7 +31,7 @@ let nmtSlider = document.querySelector('.nmt-slider-one'),
   nmtSliderList = nmtSlider.querySelector('.nmt-slider-list-one'),
   nmtSliderTrack = nmtSlider.querySelector('.nmt-slider-track-one'),
   nmtSlides = nmtSlider.querySelectorAll('.nmt-slide-one'),
-  nmtArrows = nmtSlider.querySelector('.slider-arrows-nmt-one'),
+  nmtArrows = nmtSlider.querySelector('.slider-arrows-nmt-one-nmt'),
   nmtPrev = nmtArrows.children[0],
   nmtNext = nmtArrows.children[1],
   nmtSlideWidth = nmtSlides[0].offsetWidth,
@@ -48,7 +48,7 @@ let nmtSlider = document.querySelector('.nmt-slider-one'),
   nmtTransition = true,
   nmtNextTrf = 0,
   nmtPrevTrf = 0,
-  nmtLastTrf = --nmtSlides.length * nmtSlideWidth,
+  nmtLastTrf = 9 * nmtSlideWidth,  // 9 шагов вправо
   nmtPosThreshold = nmtSlides[0].offsetWidth * 0.35,
   nmtTrfRegExp = /([-0-9.]+(?=px))/,
   nmtSwipeStartTime,
@@ -63,7 +63,7 @@ let nmtSlider = document.querySelector('.nmt-slider-one'),
     nmtSliderTrack.style.transform = `translate3d(-${nmtSlideIndex * nmtSlideWidth}px, 0px, 0px)`;
 
     nmtPrev.classList.toggle('disabled', nmtSlideIndex === 0);
-    nmtNext.classList.toggle('disabled', nmtSlideIndex === --nmtSlides.length);
+    nmtNext.classList.toggle('disabled', nmtSlideIndex === 9);
   },
   nmtSwipeStart = function() {
     let evt = nmtGetEvent();
@@ -123,8 +123,8 @@ let nmtSlider = document.querySelector('.nmt-slider-one'),
         }
       }
 
-      // запрет ухода вправо на последнем слайде
-      if (nmtSlideIndex === --nmtSlides.length) {
+      // запрет ухода вправо на последнем допустимом слайде (9 раз)
+      if (nmtSlideIndex === 9) {
         if (nmtPosInit > nmtPosX1) {
           nmtSetTransform(transform, nmtLastTrf);
           return;
@@ -178,10 +178,10 @@ let nmtSlider = document.querySelector('.nmt-slider-one'),
     }
 
   },
-  nmtSetTransform = function(transform, comapreTransform) {
-    if (transform >= comapreTransform) {
-      if (transform > comapreTransform) {
-        nmtSliderTrack.style.transform = `translate3d(${comapreTransform}px, 0px, 0px)`;
+  nmtSetTransform = function(transform, compareTransform) {
+    if (transform >= compareTransform) {
+      if (transform > compareTransform) {
+        nmtSliderTrack.style.transform = `translate3d(${compareTransform}px, 0px, 0px)`;
       }
     }
     nmtAllowSwipe = false;
@@ -199,12 +199,12 @@ nmtSliderTrack.addEventListener('transitionend', () => nmtAllowSwipe = true);
 nmtSlider.addEventListener('touchstart', nmtSwipeStart);
 nmtSlider.addEventListener('mousedown', nmtSwipeStart);
 
-nmtArrows.addEventListener('click', function() {
+nmtArrows.addEventListener('click', function(event) {
   let target = event.target;
 
-  if (target.classList.contains('next-nmt-one')) {
+  if (target.classList.contains('next-nmt-one-nmt') && nmtSlideIndex < 9) {
     nmtSlideIndex++;
-  } else if (target.classList.contains('prev-nmt-one')) {
+  } else if (target.classList.contains('prev-nmt-one-nmt') && nmtSlideIndex > 0) {
     nmtSlideIndex--;
   } else {
     return;
@@ -213,6 +213,7 @@ nmtArrows.addEventListener('click', function() {
   nmtSlide();
 });
 
+let windowWidthSlide = window.innerWidth
 let nmtSlider2 = document.querySelector('.nmt-slider-two'),
   nmtSliderList2 = nmtSlider2.querySelector('.nmt-slider-list-two'),
   nmtSliderTrack2 = nmtSlider2.querySelector('.nmt-slider-track-two'),
@@ -248,8 +249,19 @@ let nmtSlider2 = document.querySelector('.nmt-slider-two'),
     }
     nmtSliderTrack2.style.transform = `translate3d(-${nmtSlideIndex2 * nmtSlideWidth2}px, 0px, 0px)`;
 
-    nmtPrev2.classList.toggle('disabled', nmtSlideIndex2 === 0);
-    nmtNext2.classList.toggle('disabled', nmtSlideIndex2 === 3);
+    if (windowWidthSlide >= 1320){
+      nmtPrev2.classList.toggle('disabled', nmtSlideIndex2 === 0);
+      nmtNext2.classList.toggle('disabled', nmtSlideIndex2 === 3);
+    }
+    else if(windowWidthSlide < 1100 && windowWidthSlide > 630){
+      nmtPrev2.classList.toggle('disabled', nmtSlideIndex2 === 0);
+      nmtNext2.classList.toggle('disabled', nmtSlideIndex2 === 5);
+    }
+    // else{
+    //   prev.classList.toggle('disabled', slideIndex === 0);
+    //   next.classList.toggle('disabled', slideIndex === 4);
+    // }
+
   },
   nmtSwipeStart2 = function() {
     let evt = nmtGetEvent2();
