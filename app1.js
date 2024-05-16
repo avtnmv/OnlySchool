@@ -1,24 +1,37 @@
 var modalBackground1 = document.getElementById("modalBackground1");
 var modal1 = document.getElementById("myModal1");
 
-var btn3 = document.getElementById("openModal3");
-var span1 = document.getElementsByClassName("close1")[0];
-var submitBtn1 = document.getElementById("submit-btn1");
+var btn10 = document.getElementById("openModal10");
+var btn11 = document.getElementById("openModal11");
+var btn12 = document.getElementById("openModal12");
+var btn13 = document.getElementById("openModal13");
+var btn14 = document.getElementById("openModal14");
+var btn15 = document.getElementById("openModal15");
 
 
-btn3.onclick = function() {
+btn10.onclick = function() {
   modal1.style.display = "block";
   modalBackground1.style.display = "block";
 }
-
-span1.onclick = function() {
-  modal1.style.display = "none";
-  modalBackground1.style.display = "none";
+btn11.onclick = function() {
+  modal1.style.display = "block";
+  modalBackground1.style.display = "block";
 }
-
-submitBtn1.onclick = function() {
-  modal1.style.display = "none";
-  modalBackground1.style.display = "none";
+btn12.onclick = function() {
+  modal1.style.display = "block";
+  modalBackground1.style.display = "block";
+}
+btn13.onclick = function() {
+  modal1.style.display = "block";
+  modalBackground1.style.display = "block";
+}
+btn14.onclick = function() {
+  modal1.style.display = "block";
+  modalBackground1.style.display = "block";
+}
+btn15.onclick = function() {
+  modal1.style.display = "block";
+  modalBackground1.style.display = "block";
 }
 
 modalBackground1.onclick = function() {

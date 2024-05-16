@@ -2516,6 +2516,9 @@ margin-bottom: 50px;
 .hamburger-icon span:first-child {
   transform: none;
 }
+.slider-arrows{
+  display: none;
+}
 
   @keyframes fadeInFromNone {
     0% {
@@ -2546,6 +2549,7 @@ margin-bottom: 50px;
     .wrapForm{
       width: 550px;
     }
+    .slider-arrows{display: block;}
     .header-container{
       width: 618px;
       padding-left: 0;
@@ -3010,6 +3014,7 @@ flex-direction: column;
         padding-left: 0;
         padding-right: 0;
       }
+      .slider-arrows{display: block;}
       .sale{
         background-image: url(./img/sale-mobile.png);
       }

@@ -177,11 +177,11 @@ function getCoords(elem) {
     }
     else if(windowWidth < 1100 && windowWidth > 630){
       prev.classList.toggle('disabled', slideIndex === 0);
-      next.classList.toggle('disabled', slideIndex === 4);
+      next.classList.toggle('disabled', slideIndex === 3);
     }
     else{
       prev.classList.toggle('disabled', slideIndex === 0);
-      next.classList.toggle('disabled', slideIndex === 4);
+      next.classList.toggle('disabled', slideIndex === 3);
     }
 
   },
@@ -370,7 +370,8 @@ var btn = document.getElementById("openModal");
 var btn2 = document.getElementById("openModal2");
 var btn3 = document.getElementById("openModal3");
 var btn4 = document.getElementById("openModal4");
-var btn4 = document.getElementById("openModal5");
+var btn5 = document.getElementById("openModal5");
+
 
 btn.onclick = function() {
   modal.style.display = "block";
@@ -393,7 +394,10 @@ btn5.onclick = function() {
   modal.style.display = "block";
   modalBackground.style.display = "block";
 }
-
+modalBackground.onclick = function() {
+  modal.style.display = "none";
+  modalBackground.style.display = "none";
+}
 function look(){
   param=document.getElementById('div1');
   if(param.style.display == "none") param.style.display = "block";
