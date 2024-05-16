@@ -3028,6 +3028,7 @@ flex-direction: column;
       }
       .modal{
         width: 320px;
+        font-size: 12px;
       }
       .herosection{
         width: 327px;
