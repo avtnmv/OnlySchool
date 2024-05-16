@@ -3294,9 +3294,9 @@ flex-direction: column;
           width: 132px;
         }
         .nmt-herosection{
-          width: 327px;
+          width: 329px;
           background-image: url(./img/mobile-hero-nmt.png);
-          background-size: cover;
+          background-size: contain;
           height: 1000px;
         }
         .nmt-our-booster{
