@@ -257,10 +257,10 @@ let nmtSlider2 = document.querySelector('.nmt-slider-two'),
       nmtPrev2.classList.toggle('disabled', nmtSlideIndex2 === 0);
       nmtNext2.classList.toggle('disabled', nmtSlideIndex2 === 5);
     }
-    // else{
-    //   prev.classList.toggle('disabled', slideIndex === 0);
-    //   next.classList.toggle('disabled', slideIndex === 4);
-    // }
+    else{
+      nmtPrev2.classList.toggle('disabled', nmtSlideIndex2 === 0);
+      nmtNext2.classList.toggle('disabled', nmtSlideIndex2 === 5)
+    }
 
   },
   nmtSwipeStart2 = function() {
@@ -488,6 +488,11 @@ function looknmt(){
                 else if((windowWidthSlide < 1100 && windowWidthSlide2 > 630)){
                     nmtPrev2M.classList.toggle('disabled', nmtSlideIndex2M === 0);
                     nmtNext2M.classList.toggle('disabled', nmtSlideIndex2M === 4);
+                  }
+
+                  else{
+                    nmtPrev2M.classList.toggle('disabled', nmtSlideIndex2M === 0);
+                    nmtNext2M.classList.toggle('disabled', nmtSlideIndex2M === 4)
                   }
                 
               },

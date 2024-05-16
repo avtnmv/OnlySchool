@@ -3287,4 +3287,95 @@ flex-direction: column;
         .oferta{
           width: 132px;
         }
-    }
+        .nmt-herosection{
+          width: 327px;
+          background-image: url(./img/mobile-hero-nmt.png);
+          background-size: cover;
+          height: 1000px;
+        }
+        .nmt-our-booster{
+          width: 327px;
+        }
+        .nmt-text-block{
+          width: 327px;
+          background-image: url(./img/nmt-your-mobile.png);
+          background-size: cover;
+          height: 830px;
+        }
+        .nmt-slide-one{
+          width: 327px;
+        }
+        .nmt-slider-list-one.grab{
+          width: 327px;
+        }
+        .nmt-slider-list-one.grabbing{
+          width: 327px;
+        }
+        .nmt-slide-one{
+          margin-right: 0px;
+        }
+        .unique{
+          width: 327px;
+        }
+        .unique-bg-text{
+          width: 327px;
+          background-image: url(./img/text-block-mobile.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          height: 290px;
+        }
+        .nmt-slider-two{
+          width: 327px;
+        }
+        .next-nmt-one-two, .prev-nmt-one-two{
+          font-size: 15px;
+          width: 35px;
+          height: 35px;
+        }
+        .sub{
+          width: 327px;
+          justify-content: space-between;
+        }
+        .nmt-show-subj{
+          font-size: 14px;
+          margin-left: 2px;
+        }
+        .nmt-chill{
+          width: 327px;
+        }
+        .slide-nmt-fixed{
+          width: 327px;
+        }
+        .booster-img{
+          width: 300px;
+          margin-left: 12px;
+        }
+        .what-about-money{
+          width: 327px;
+        }
+        .bg-money-container{
+          width: 327px;
+          flex-direction: column;
+        }
+        .bg-money{
+          height: 1500px;
+        }
+        .nmt-column-money{
+          display: flex;
+      flex-direction: column;
+      align-items: center;
+        }
+        .NMT-span{
+          font-size: 59px;
+          line-height: 0xp;
+        }
+        .nmt-header-p4{
+          font-size: 33px;
+          line-height: 60px;
+        }
+        .next-nmt-one-two-M, .prev-nmt-one-two-M{
+          width: 35px;
+          height: 35px;
+          font-size: 15px;
+        }
+      }
