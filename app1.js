@@ -445,7 +445,7 @@ function looknmt(){
               if(param.style.display == "none") param.style.display = "block";
               else param.style.display = "none"
               }
-
+              let windowWidthSlide2 = window.innerWidth
               let nmtSlider2M = document.querySelector('.nmt-slider-two-M'),
               nmtSliderList2M = nmtSlider2M.querySelector('.nmt-slider-list-two-M'),
               nmtSliderTrack2M = nmtSlider2M.querySelector('.nmt-slider-track-two-M'),
@@ -481,8 +481,15 @@ function looknmt(){
                 }
                 nmtSliderTrack2M.style.transform = `translate3d(-${nmtSlideIndex2M * nmtSlideWidth2M}px, 0px, 0px)`;
             
-                nmtPrev2M.classList.toggle('disabled', nmtSlideIndex2M === 0);
-                nmtNext2M.classList.toggle('disabled', nmtSlideIndex2M === 2);
+                if(windowWidthSlide2 >= 1320){
+                  nmtPrev2M.classList.toggle('disabled', nmtSlideIndex2M === 0);
+                  nmtNext2M.classList.toggle('disabled', nmtSlideIndex2M === 2);
+                }
+                else if((windowWidthSlide < 1100 && windowWidthSlide2 > 630)){
+                    nmtPrev2M.classList.toggle('disabled', nmtSlideIndex2M === 0);
+                    nmtNext2M.classList.toggle('disabled', nmtSlideIndex2M === 4);
+                  }
+                
               },
               nmtSwipeStart2M = function() {
                 let evt = nmtGetEvent2M();
