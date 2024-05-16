@@ -6,6 +6,7 @@
     list-style: none;
     border: none; 
     background: none;
+    scroll-behavior: smooth;
 
 }
 @font-face {
@@ -846,6 +847,12 @@ margin-right: 90px;
     margin-left: -160px;
     margin-top: 30px;
 }
+.sale{
+  background-image: url(./img/sale-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 420px;
+}
 .study-form-third{
     width: 320.5px;
     height: 256px;
@@ -1036,8 +1043,40 @@ margin-right: 90px;
     color: #000;
     
   }
-  
-  
+  .sale-a-div{
+padding-top: 312px;
+  }
+  .sale-a{
+    margin: auto;
+    display: block;
+    width: 425px;
+    height: 54px;
+/* Автолейаут */
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 12px 114px 12px 114px;
+border: 2px solid rgb(255, 255, 255);
+border-radius: 12px;
+color: rgb(255, 255, 255);
+font-family: 'Manrope';
+font-size: 22px;
+font-weight: 600;
+line-height: 30px;
+letter-spacing: 4%;
+text-align: left;
+  }
+  .sale-a:hover{
+    border: 2px solid rgb(255, 176, 51);
+    color: rgb(255, 176, 51);
+    transition: .2s ease-in-out;
+  }
+  .sale-a:active{
+    border: 2px solid rgb(203, 91, 3);
+    color: rgb(203, 91, 3);
+    transition: .2s ease-in-out;
+  }
   .slider-list {
     width: 1440px;
     height: 768px;
@@ -1769,7 +1808,7 @@ footer{
     top: 50%;
     transform: translate(-50%, -50%);
     width: 668px; 
-    height: 648px; 
+    /* height: 648px;  */
 
   }
   .modal-background{
@@ -2489,6 +2528,16 @@ margin-bottom: 50px;
       padding-left: 0;
       padding-right: 0;
     }
+    .sale{
+      margin-top: 60px;
+      background-image: url(./img/sale-tablet.png);
+      background-size: cover;
+      height: 310px;
+    }
+
+.sale-a-div{
+  padding-top: 225px;
+}
     .header-container{
       justify-content: space-around;
     }
@@ -2678,7 +2727,7 @@ margin-left: 20px;
 }
 .how-study-works{
   width: 618px;
-  height: 3500px;
+  height: 3700px;
   padding-left: 0px;
   padding-right: 0px;
   background-image: url(./img/how-study-work-tablet.png);
@@ -2835,6 +2884,18 @@ width: 608px;
         padding-left: 0;
         padding-right: 0;
       }
+      .sale{
+        background-image: url(./img/sale-mobile.png);
+      }
+      .sale-a{
+        width: 306px;
+        height: 40px;
+        font-size: 16px;
+      }
+      .sale-a-div{
+        padding-top: 250px;
+      }
+
       .herosection{
         width: 327px;
         height: 446px;
@@ -2846,6 +2907,9 @@ width: 608px;
       .go-to-course-link{
         padding: 0;
 
+      }
+      .first-section{
+        width: unset;
       }
       .first-section p{
         display: none;
@@ -3065,6 +3129,9 @@ width: 608px;
       .accordeon-p-opened{
         margin-top: 0px;
       }
+      .accordeon-heading1{
+        width: 207px;
+      }
       .footer-section-one-p-second{
         width: 195px;
         font-size: 12px;
@@ -3072,7 +3139,7 @@ width: 608px;
       }
       .footer-container{
         width: 327px;
-      }
+      } 
       .footer-section-one-p-first{
         font-size: 33px;
         line-height: 80px;
@@ -3085,5 +3152,11 @@ width: 608px;
         }
         .accordeon-p-seven{
           margin-top: -15px;
+        }
+        .footer-section-one a{
+          font-size: 12px;
+        }
+        .oferta{
+          width: 132px;
         }
     }
