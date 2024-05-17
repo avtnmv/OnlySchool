@@ -354,6 +354,12 @@ display: flex;
 .span1{
     display: none;
 }
+.how-much{
+  font-family: 'Manrope';
+  font-size: 20px;
+  margin-bottom: 45px;
+  font-weight: 600;
+}
 .emoji{
     background-image: url(./img/emodji.png);
     width: 716px;    
@@ -361,6 +367,8 @@ display: flex;
     background-size: contain;
     margin-top: 45px;
     margin-left: 136px;
+    background-repeat: no-repeat;
+    margin-top: 120px;
 }
 .whats-more-p{
     width: 465px;
