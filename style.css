@@ -2519,7 +2519,15 @@ margin-bottom: 50px;
 .slider-arrows{
   display: none;
 }
-
+.booster-img{
+  margin-bottom: 25px;
+}
+.accordeon-div-one{
+  align-items: unset;
+}
+.accordeon-div-one svg{
+  margin-left: 92px;
+}
   @keyframes fadeInFromNone {
     0% {
       opacity: 0;
@@ -3017,6 +3025,9 @@ flex-direction: column;
       .slider-arrows{display: block;}
       .sale{
         background-image: url(./img/sale-mobile.png);
+      }
+      .bg-money{
+        border-radius: 0px;
       }
       .sale-a{
         width: 306px;
