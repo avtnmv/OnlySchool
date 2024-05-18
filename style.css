@@ -2580,6 +2580,7 @@ margin-bottom: 50px;
     .modal{
       width: 550px;
     }
+
 .sale-a-div{
   padding-top: 225px;
 }
@@ -2686,7 +2687,7 @@ margin-left: 20px;
   margin-left: -295px;
   width: 610px;
   background-repeat: no-repeat;
-  margin-top: 80px;
+  margin-top: 125px;
 }
 .filter .text{
   font-size: 16.5px;
@@ -3133,6 +3134,7 @@ flex-direction: column;
       .emoji{
         width: 327px;
         margin-left: 0px;
+        margin-top: 170px;
       }
       .whats-more-bg-info{
         width: 327px;
