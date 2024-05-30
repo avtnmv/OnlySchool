@@ -1763,7 +1763,7 @@ footer{
     align-items: center;
 }
 .accordeon-p-seven{
-    margin-top: -40px;
+    margin-top: -15px;
 }
 #card-container {
     width: 100%;
@@ -3306,7 +3306,7 @@ flex-direction: column;
           background-image: url(./img/footer-bg-mobile.png);
         }
         .accordeon-p-seven{
-          margin-top: -15px;
+          margin-top: -10px;
         }
         .footer-section-one a{
           font-size: 12px;
