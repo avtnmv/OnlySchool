@@ -25,11 +25,11 @@
   justify-content: space-between;
 }
 .navbar ul {
-  width: 588px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: "Manrope";
+  gap: 10px;
 }
 .nav-link-button {
   border: 2px solid rgb(252, 125, 1);
@@ -51,6 +51,23 @@
   font-weight: 500;
   line-height: 22px;
 }
+.nav-link {
+  padding: 12px 28px 12px 28px;
+  border: 2px solid rgb(13, 136, 234);
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 4%;
+  transition: 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: rgb(13, 136, 234);
+
+  color: white;
+}
+
 .first-section {
   width: 567px;
   height: 459px;
@@ -319,6 +336,7 @@ span {
   z-index: 1;
   cursor: pointer;
   color: black;
+  user-select: none;
 }
 .filter .block-min span {
   position: absolute;
