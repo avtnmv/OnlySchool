@@ -454,3 +454,43 @@ function look9() {
   if (param.style.display == "none") param.style.display = "block";
   else param.style.display = "none";
 }
+
+// DATA SENDING
+document
+  .getElementById("consultationForm")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = {
+      name: document.getElementById("name").value,
+      phone: document.getElementById("phone").value,
+      instagram: document.getElementById("instagram").value,
+      subject: document.getElementById("subject").value,
+    };
+    const response = await fetch(
+      "https://onlyback-git-main-ilyalazarenkoits-projects.vercel.app/createLead",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
+    if (response.ok) {
+      modal.style.display = "none";
+      modalBackground.style.display = "none";
+      const successMessage = document.getElementById("successMessage");
+      successMessage.style.display = "block";
+
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 3000);
+    } else {
+      console.error("Ошибка при отправке данных:", response.statusText);
+    }
+    try {
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  });

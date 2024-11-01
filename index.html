@@ -1509,22 +1509,39 @@
     
     </div>
         </footer>
+        
         <div class="modal-background" id="modalBackground"></div>
-
         <div id="myModal" class="modal">
-    
-            <div id="form_216933_1"></div>
-            <script type="text/javascript">
-               (function (d, w, c) {
-                   (w[c] = w[c] || []).push({formId:216933,host:"formdesigner.com.ua",formHeight:100, el: "form_216933_1",center: 1,scroll: 0});
-                   var s = d.createElement("script"), g = "getElementsByTagName";
-                   s.type = "text/javascript"; s.charset="UTF-8"; s.async = true;
-                   s.src = (d.location.protocol == "https:" ? "https:" : "http:")+"//formdesigner.com.ua/js/iform.js?v=0.0.3";
-                   var h=d[g]("head")[0] || d[g]("body")[0];
-                   h.appendChild(s);
-               })(document, window, "fdforms");
-            </script>
-    
+            <div class="modal-content">
+                <h2>Скоріше отримуйте персональну консультацію про актуальні курси підготовки</h2>
+                <form id="consultationForm">
+                    <label for="name">Ваше ім'я *</label>
+                    <input type="text" id="name" name="name" required>
+        
+                 <!-- Phone Number Input with Masking -->
+<label for="phone">Номер телефону</label>
+<input type="tel" id="phone" name="phone" required>
+
+        
+                    <label for="instagram">Нікнейм в Instagram *</label>
+                    <input type="text" id="instagram" name="instagram" required>
+                    <label for="subject">Обрати предмет</label>
+                    <select id="subject" name="subject" required>
+                        <option value="Українська мова">Українська мова</option>
+                        <option value="Українська література">Українська література</option>
+                        <option value="Англійська">Англійська</option>
+                        <option value="Математика">Математика</option>
+                        <option value="Біологія">Біологія</option>
+                        <option value="Історія України">Історія України</option>
+                    </select>
+        
+                    <button type="submit">Відправити</button>
+                </form>
+            </div>
+        </div>
+        <div id="successMessage" class="successMessage">
+            Дякуємо за заявку! Менеджери скоро зв'яжуться з Вами!
+          </div>
     </div>
 
 
