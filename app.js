@@ -369,33 +369,33 @@ var btn = document.getElementById("openModal");
 var btn2 = document.getElementById("openModal2");
 var btn3 = document.getElementById("openModal3");
 var btn4 = document.getElementById("openModal4");
-var btn5 = document.getElementById("openModal5");
+// var btn5 = document.getElementById("openModal5");
 
-btn.onclick = function () {
+function openModal() {
   modal.style.display = "block";
   modalBackground.style.display = "block";
-};
+}
 
-btn2.onclick = function () {
-  modal.style.display = "block";
-  modalBackground.style.display = "block";
-};
-btn3.onclick = function () {
-  modal.style.display = "block";
-  modalBackground.style.display = "block";
-};
-btn4.onclick = function () {
-  modal.style.display = "block";
-  modalBackground.style.display = "block";
-};
-btn5.onclick = function () {
-  modal.style.display = "block";
-  modalBackground.style.display = "block";
-};
+btn.onclick = openModal;
+btn2.onclick = openModal;
+btn3.onclick = openModal;
+btn4.onclick = openModal;
+// btn5.onclick = openModal;
+
 modalBackground.onclick = function () {
+  console.log("hello");
   modal.style.display = "none";
   modalBackground.style.display = "none";
 };
+
+window.onclick = function (event) {
+  console.log(event);
+  if (event.target === modalBackground) {
+    modal.style.display = "none";
+    modalBackground.style.display = "none";
+  }
+};
+
 function look() {
   param = document.getElementById("div1");
   if (param.style.display == "none") param.style.display = "block";
@@ -460,13 +460,13 @@ document
   .getElementById("consultationForm")
   .addEventListener("submit", async function (event) {
     event.preventDefault();
-
     const formData = {
       name: document.getElementById("name").value,
       phone: document.getElementById("phone").value,
       instagram: document.getElementById("instagram").value,
       subject: document.getElementById("subject").value,
     };
+    console.log(formData);
     const response = await fetch(
       "https://onlyback-git-main-ilyalazarenkoits-projects.vercel.app/createLead",
       {
