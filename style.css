@@ -1815,7 +1815,7 @@ footer {
 .load-more {
   cursor: pointer;
 }
-.modal {
+/* .modal {
   display: none;
   position: fixed;
   z-index: 2;
@@ -1823,7 +1823,7 @@ footer {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 668px;
-  /* height: 648px;  */
+  height: 648px; 
 }
 .modal-background {
   display: none;
@@ -1834,7 +1834,7 @@ footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-}
+} */
 
 /* .modal-content p {
   color: rgb(255, 255, 255);
@@ -3434,8 +3434,6 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
-
-/* Modal Container */
 .modal {
   display: none;
   position: fixed;
@@ -3443,66 +3441,104 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  background-image: url("/img/gradient.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 648px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 40px;
 }
 
-/* Modal Content Styling */
+/* Контент модалки */
 .modal-content {
-  background-color: white;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+  background-color: transparent;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Druk Text LCG";
 }
 
-.modal-content h2 {
+.modal-content p {
+  text-transform: uppercase;
+  color: white;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: medium;
   text-align: center;
-  color: #333;
   margin-bottom: 25px;
   line-height: 1.4;
+  text-align: left;
 }
 
 /* Form Layout */
 .modal-content form {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  /* align-items: stretch; */
 }
-
+/* 
 .modal-content label {
   font-size: 14px;
   color: #333;
   margin-bottom: 5px;
-}
+} */
 
 .modal-content input[type="text"],
 .modal-content input[type="tel"],
 .modal-content select {
-  padding: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-bottom: 15px;
   box-sizing: border-box;
   width: 100%;
+  outline: none;
+  color: white;
+}
+.modal-content input::placeholder {
+  opacity: 0.5;
+  color: white;
+}
+.modal-content select {
+  background-color: transparent;
 }
 
+.modal-content select option {
+  background-color: #015499;
+  color: white;
+  padding: 10px;
+}
+.modal-content select option:disabled {
+  display: none;
+}
 /* Button Styling */
 .modal-content button {
   padding: 12px;
   font-size: 16px;
   color: white;
-  background-color: #333;
-  border: none;
+  background-color: transparent;
+  border: 1px solid white;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  font-family: "Druk Text LCG";
+  font-weight: 200;
+  font-size: 18px;
+  transition: all 0.3s ease; /* Добавляем плавную анимацию для всех изменений */
 }
 
 .modal-content button:hover {
-  background-color: #555;
+  background-color: #fc7d01;
+  border: 1px solid #fc7d01;
 }
+
 .successMessage {
   display: none;
   padding: 15px;
@@ -3516,4 +3552,84 @@ footer {
   z-index: 1000;
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* NEW FORM  */
+
+/* Контент формы */
+.consultation-section {
+  font-family: "Druk Text LCG";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  background: linear-gradient(to bottom, #006bc7, #003461);
+  border-radius: 40px;
+}
+
+.consultation-wrapper {
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.consultation-text-wrapper {
+  margin-bottom: 70px;
+}
+.consultation-wrapper p {
+  text-transform: uppercase;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.consultation-wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.consultation-wrapper input[type="text"],
+.consultation-wrapper input[type="tel"],
+.consultation-wrapper select {
+  padding: 20px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+  outline: none;
+}
+
+.consultation-wrapper input::placeholder {
+  opacity: 0.5;
+  color: white;
+}
+
+.consultation-wrapper select {
+  background-color: transparent;
+}
+
+.consultation-wrapper select option {
+  background-color: #015499;
+  color: white;
+  padding: 10px;
+}
+
+.consultation-wrapper button {
+  padding: 12px;
+  font-size: 18px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.consultation-wrapper button:hover {
+  background-color: #fc7d01;
+  border: 1px solid #fc7d01;
 }

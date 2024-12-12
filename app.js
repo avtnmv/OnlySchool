@@ -494,3 +494,40 @@ document
       console.error("Error:", error);
     }
   });
+
+// /////////////////////////// FORM NEW //////////////
+document
+  .getElementById("consultationFormNew")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    const formData = {
+      name: document.getElementById("nameNew").value,
+      phone: document.getElementById("phoneNew").value,
+      instagram: document.getElementById("instagramNew").value,
+      subject: document.getElementById("subjectNew").value,
+    };
+    console.log(formData);
+
+    const response = await fetch(
+      "https://onlyback-git-main-ilyalazarenkoits-projects.vercel.app/createLead",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
+
+    if (response.ok) {
+      const successMessage = document.getElementById("successMessageNew");
+      successMessage.style.display = "block";
+
+      setTimeout(() => {
+        successMessage.style.display = "none";
+      }, 3000);
+    } else {
+      console.error("Ошибка при отправке данных:", response.statusText);
+    }
+  });
